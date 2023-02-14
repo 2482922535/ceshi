@@ -14,6 +14,7 @@ date2day=$(date -d "2 days ago" "+%Y-%m-%d")
 
 echo "==============================================================" >> ${updateETLLog}
 echo "`date "+%Y-%m-%d %H:%M:%S"` cboard table begin" >> ${updateETLLog}
+# shellcheck disable=SC2068
 for file in ${midTable[@]}
 do
 	echo "begin ${file%.sql} data at ${date1day}" >> ${updateETLLog}
